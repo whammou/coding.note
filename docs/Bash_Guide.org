@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID: 55754a14-0425-4704-874b-6723af32b137
+:END:
+#+TITLE: Bash Guide
+
+#+OPTIONS: title:nil tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
+#+LATEX_HEADER: \renewcommand\maketitle{} \usepackage[scaled]{helvet} \renewcommand\familydefault{\sfdefault}
+#+TODO: TODO(t) (e) DOING(d) PENDING(p) OUTLINE(o) RESEARCH(s) FEEDBACK(b) WAITING(w) NEXT(n) | IDEA(i) ABORTED(a) PARTIAL(r) REVIEW(v) DONE(f)
+#+FILETAGS: :DOC:PROJECT:CODING:BASH:
+#+HTML:<details>
+
+* Bash Guide :DOC:META:CODING:BASH:
+#+HTML:</details>
+#+BEGIN_QUOTE
+Bash is a scripting language uses to interact with an operating system and do terminal bash tasks, but can do basic programming like other simple programming language. Its like C but for temrinal
+#+END_QUOTE
+** POSIX Standard
+POSIX or /Portable Operating System Interface/ is a family of standard specified by the /IEEE Computer Society/ for maintaining compatibility between /operating systems/ 
+  +  Defines /application programming interface/ (APIs)
+  +  Is a trademark of of the =IEEE=
+  +  Is intended to be used to both application and system developers
+** Replace File Content with Bash
+Replacing a file content using bash script
+*** Convert Strings casing
+To convert a string to =lowercase= or =uppercase= using bash script
+
+#+NAME:Example
+
+#+BEGIN_SRC bash
+string="Hello World"
+echo "$string" | awk '{print tolower($0)}'
+# hello world
+#+END_SRC

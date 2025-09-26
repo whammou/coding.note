@@ -1,0 +1,40 @@
+:PROPERTIES:
+:ID: 90bc68ce-6bb5-4a0c-8d21-5aae9b71ce8d
+:ROAM_ORIGIN: cef2ffa1-7068-41b5-9aea-f2a04a7d293e
+:END:
+#+TITLE: Latex Guide
+
+#+OPTIONS: title:nil tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
+#+LATEX_HEADER: \renewcommand\maketitle{} \usepackage[scaled]{helvet} \renewcommand\familydefault{\sfdefault}
+#+TODO: TODO(t) (e) DOING(d) PENDING(p) OUTLINE(o) RESEARCH(s) FEEDBACK(b) WAITING(w) NEXT(n) | IDEA(i) ABORTED(a) PARTIAL(r) REVIEW(v) DONE(f)
+#+FILETAGS: :DOC:PROJECT:CODING:LATEX:GUIDE:
+#+HTML:<details>
+
+* PENDING Latex Guide :DOC:META:CODING:LATEX:GUIDE:
+#+HTML:</details>
+- *OBJECTIVE:* Develop a framwork for latex format/
+- *Reference:* Tutorial documentation for latex
+  - [[https://www.learnlatex.org/en/][Latex for beginner @Learntex]]
+  - [[https://www.overleaf.com/learn][Overleaf latex tutorial for beginner @Overleaf]]
+** DONE Setup editor for latex :NVIM:
+CLOSED: [2025-07-12 Sat 07:51]
+- *OBJECTIVE:* Setup nvim to env to write latex in/
+  - *Visit:* [[https://github.com/lervag/vimtex][Vimtex plugin @Github]]
+** TODO Files conversion :PANDOC:GEMINI:
+- [-] *OBJECTIVE:* Convert documents from and to latex/ [50%]
+  - [ ] Convert from pdf to latex - Use =Gemini-2.5-pro=
+  - [X] Convert from latex to pdf - Use =latexmk= or =pandoc=
+- *Complication:* Workflow integration
+  Having to log on [[https://gemini.google.com/app][Google gemini @Google]] is not ideal - Integrate to shell or nvim
+- *Reference:* [[id:7c0ce0b0-4d7d-4468-8263-c3b28cd3af1b][File conversions @Orgmode]]
+*** TODO Convert PDF to latex :AI:
+:PROPERTIES:
+:ID:       0fba82ab-0863-4292-838e-bee27fb27153
+:END:
+- *OBJECTIVE:* /Convert documents from PDF to latex using AI/
+- *Reference:* [[https://www.reddit.com/r/Bard/comments/1bgstvx/suddenly_discovered_latex_on_gemini_web/][Latex on Gemini @Reddit]]
+*** Convert PDF to markdown
+- *OBJECTIVE:* Convert pdf to markdown/
+*** Pandoc conversion :PANDOC:
+- *OBJECTIVE:* Convert filetype using pandoc
+- *Reference:* [[https://ao.bloat.cat/exchange/stackoverflow.com/questions/56828128/pandoc-is-tex-output-with-dollar-sign-math-possible][Pandoc math filter @Overflow]]

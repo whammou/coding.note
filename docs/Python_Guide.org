@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID: cef2ffa1-7068-41b5-9aea-f2a04a7d293e
+:END:
+#+TITLE: Python Guide
+
+#+OPTIONS: title:nil tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
+#+LATEX_HEADER: \renewcommand\maketitle{} \usepackage[scaled]{helvet} \renewcommand\familydefault{\sfdefault}
+#+TODO: TODO(t) (e) DOING(d) PENDING(p) OUTLINE(o) RESEARCH(s) FEEDBACK(b) WAITING(w) NEXT(n) | IDEA(i) ABORTED(a) PARTIAL(r) REVIEW(v) DONE(f)
+#+FILETAGS: :DOC:PROJECT:CODING:PYTHON:GUIDE:
+#+HTML:<details>
+
+* PENDING Python Guide [0%] :DOC:META:CODING:PYTHON:GUIDE:
+#+HTML:</details>
+- *OBJECTIVE:* /Automantion documentation with python/
+** Python scripting :SCRIPTING:
+- *OBJECTIVE:* /Learn to do some scrpiting with python/
+*** Passing shell arguments :SHELL:
+- *OBJECTIVE:* /Passing argument from shell/
+  - *References:* [[https://ao.bloat.cat/exchange/stackoverflow.com/questions/39498702/passing-arguments-to-python-from-shell-script][Passing shell argument to python @Overflow]]
+** PENDING Python virutal enviroment
+- *OBJECTIVE:* /Manage python virtual enviroments/
+  - To initiate virtual environment, run =python -m venv <name>=
+- *Visit:* [[https://www.youtube.com/watch?v=IYcTaZfjODg#__preview][Understand python vm @Youtube]]
+*** Manage packages
+- *OBJECTIVE:* /Save virtual environemnt state/
+  - To create lock file, run (when inside virtual environment) =pip freeze > requirements.txt=
+  - To install from =requirements.txt= run =pip install -r requirements.txt=
+** NEXT [#C] Python as a tool for note-taking :WORFLOW:
+- *OBJECTIVE:* /Create a tool ultilies python and latex in nvim to create similar workflow in this/ [[https://l.opnxng.com/r/neovim/comments/yfbfvu/sympy_luasnip_vimtex/][post]]
+- *References:* [[https://castel.dev/post/lecture-notes-1/][How I take math notes with LaTex @Blog]]

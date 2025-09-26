@@ -1,0 +1,91 @@
+#+TITLE: Coding Document Drafts
+
+#+TODO: TODO(t) (e) DOING(d) PENDING(p) OUTLINE(o) RESEARCH(s) FEEDBACK(b) WAITING(w) NEXT(n) | IDEA(i) ABORTED(a) PARTIAL(r) REVIEW(v) DONE(f)
+#+OPTIONS: title:nil tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
+#+LATEX_HEADER: \renewcommand\maketitle{} \usepackage[scaled]{helvet} \renewcommand\familydefault{\sfdefault}
+#+FILETAGS: :DOC:DRAFT:CODING:
+#+HTML:<details>
+
+* Document Drafts :DOC:DRAFT:CODING:META:
+#+HTML:</details>
+
+#+NAME:Warning Message
+#+BEGIN_QUOTE
+[!WARNING]
+Draft items are subjected to change and refile!
+#+END_QUOTE
+** OUTLINE Flag Handling :BASH:BEHAVIOUR:
+:PROPERTIES:
+:ID:       3ac3b4c9-e075-4345-a2a4-d7b6122983f8
+:END:
+*Checkout:* [[https://m.opnxng.com/@wujido20/handling-flags-in-bash-scripts-4b06b4d0ed04][Mastering Flag Handling in Bash Script @Medium]]
+#+BEGIN_QUOTE
+*Flags*, also know as command-line options, are additional =parameters= passed to a /script/ when it is executed. They modify the /script's/ behaviour or to specify certain settings
+#+END_QUOTE
+
+Using =flags= provides several benefits:
+  1. *Customization:* Change the scripts /behaviour/ to suit their specific =requirements=
+  2. *Flexibility:* Providing different =options=
+  3. *Usability:* Well-designed =flags= make /scripts/ more user-friendly
+*** REVIEW The Getopts Command
+CLOSED: [2025-09-17 Wed 21:29]
+In /Bash/, The =getopts= command is a built-in utility for parsing command=line options. It is primarily used to handle short options and their corresponding arguments
+#+NAME:getopts example
+#+BEGIN_SRC bash
+while getoptss "hvf:" flag; do
+ case $flag in
+   h) # Handle the -h flag
+   # Display script help information
+   ;;
+   v) # Handle the -v flag
+   # Enable verbose mode
+   ;;
+   f) # Handle the -f flag with an argument
+   filename=$OPTARG
+   # Process the specified file
+   ;;
+   \?)
+   # Handle invalid options
+   ;;
+ esac
+done
+#+END_SRC
+  - First =argument= is the string containing the option character (=flags=)
+    + Each character represent a valid option
+    + If a character is followed by a colon (=:=). It means the option requires an argument
+  - Second =argument= is the name of the =flag= variable
+    + Store the recognized option character
+    + In each iteration of the =getopts= loop, the current character is stored in the =flags= variable
+
+#+NAME:getopts invalid argument
+#+BEGIN_QUOTE
+[!TIP]
+When the =getopts= command encounters an invalid or unrecofnized option, it assigns =?= to the =flag= variable. The script enters the base block =/?)= to handle this situation
+#+END_QUOTE
+
+In addition to the =flag= variable. There are two other important variables: =$OPTARG= =$OPTIND=
+  - =$OPTARG= stores the value of the option argument associated with the current character
+  - =$OPTIND= is an index variable that represents the index of the next argument to be processed by =getopts=
+
+#+NAME:getopts limitations
+#+BEGIN_QUOTE
+[!NOTE]
+However, =getopts= has limitations when it comes to handling long options like =--help= or =--verbose=
+#+END_QUOTE
+*** NEXT Getopt vs Getopts :COMMAND:
+DEADLINE: <2025-09-26 Fri>
+*Checkout:* [[https://ao.bloat.cat/exchange/unix.stackexchange.com/questions/62950/getopt-getopts-or-manual-parsing-what-to-use-when-i-want-to-support-both-shor][Getopt vs Getopts Supporting of Long Options @Overflow]]
+- *POSIX compatibility*
+  While =getopts= is a built-in function of =bash= itself, =getopt= is an external program
+- *Implementability*
+  =getopts= limitations is \\
+    + it is harder to 
+- *Flexibility*
+**** OUTLINE Handling Short and Long Options
+To handle both short and lone options in Bash script
+**** DOING Option Position
+DEADLINE: <2025-09-26 Fri>
+:PROPERTIES:
+:ID: 1963e88a-c26f-4626-904d-72c9080c9055
+:END:
+Handle =options= in the =getopts= command

@@ -1,0 +1,68 @@
+:PROPERTIES:
+:ID: b73b31dd-5b83-48e2-af73-79ef09c82cc4
+:ROAM_ORIGIN: 90bc68ce-6bb5-4a0c-8d21-5aae9b71ce8d
+:END:
+#+TITLE: Lua Guide
+
+#+OPTIONS: title:nil tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
+#+LATEX_HEADER: \renewcommand\maketitle{} \usepackage[scaled]{helvet} \renewcommand\familydefault{\sfdefault}
+#+TODO: TODO(t) (e) DOING(d) PENDING(p) OUTLINE(o) RESEARCH(s) FEEDBACK(b) WAITING(w) NEXT(n) | IDEA(i) ABORTED(a) PARTIAL(r) REVIEW(v) DONE(f)
+#+FILETAGS: :DOC:PROJECT:CODING:LUA:GUIDE:
+#+HTML:<details>
+
+* OUTLINE Lua Guide :DOC:META:CODING:LUA:GUIDE:
+#+HTML:</details>
+- *OBJECTIVE:* Learn basic lua language
+- *Reference:* [[https://github.com/pohka/Lua-Beginners-Guide][Lua beginners guide @Github]]
+** DONE Values and Types :TYPE:
+CLOSED: [2025-08-11 Mon 21:22]
+- Lua is a *dynamically typed language*, meaning:
+  - =Varibles= do NOT have types only =values= do
+  - There are no type definitions in the language
+  - All value are [[https://en.wikipedia.org/wikinFirst-class_function][first-class values]]
+- There are 8 /basic types/ in =lua=: =nil=, =boolean=, =number=, =string=, =function=, =userdata=, =thread=, and =table=
+-----
+- *Reference:* [[https://www.lua.org/manual/5.1/manual.html#2.1][Types and Values Manual @Lua-doc]]
+** TODO Lua Strings Handle :STRING:
+- *Quotes* - Strings can be defined using single quotes ='=, double quotes ="=, or double square brackets =[[]]=
+- *Escape sequences* - Handle C-like escape sequences [fn:1]
+- *Multiline-quotes* - Double square brackets can be used to enclose literal strings which traverse several line
+  - *Nesting quotes* - Nesting require one more ~=~ inserted in the outer-most brackets to distinguish them
+    
+#+NAME:Nesting indications
+#+BEGIN_QUOTE
+[!NOTE]
+It doesn't matter how many ~=~ are inserted, as long as the number is the same on both ends
+#+END_QUOTE
+
+- *Concatenation* - Joining strings together using contention operation
+  - Concatenation operator =..=
+  - =Numbers= can be concatenated to =strings=
+    #+NAME:String operations
+    #+BEGIN_SRC lua
+    { literal_strings = "literal" .. 10 .. "strings" }
+    #+END_SRC
+
+#+NAME:Large number concatentation
+#+BEGIN_QUOTE
+[!WARNING]
+Doing a large number of concatenation operations may be slow becuase each contatenation may allocate a new string in memory
+#+END_QUOTE
+
+#+NAME: Examples
+  #+BEGIN_SRC lua
+  --slow
+  local s = ''
+  for i=1,10000 do s = s .. math.random() .. ',' end
+  io.stdout:write(s)
+  
+  -- fast
+  for i=1,10000 do io.stdout:write(tostring(math.random()), ',') end
+  
+  -- fast, but uses more memory
+  local t = {}
+  for i=1,10000 do t[i] = tostring(math.random()) end
+  io.stdout:write(table.concat(t,','), ',') 
+#+END_SRC
+-----
+- *Reference:* [[http://lua-users.org/wiki/StringsTutorial][Strings Tutorial @Lua-guide]]

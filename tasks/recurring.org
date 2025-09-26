@@ -1,0 +1,11 @@
+#+TODO: TODO(t) (e) DOING(d) PENDING(p) OUTLINE(o) RESEARCH(s) FEEDBACK(b) WAITING(w) NEXT(n) | IDEA(i) ABORTED(a) PARTIAL(r) REVIEW(v) DONE(f)
+#+LATEX_HEADER: \usepackage[scaled]{helvet} \renewcommand\familydefault{\sfdefault}
+#+OPTIONS: todo:t tags:nil tasks:t ^:nil toc:nil
+#+TITLE: Coding Recurring Tasks
+
+* List of Recurring Tasks :TASK:RECURRING:CODING:META:
+** PENDING Learning lua :LUA:
+- *OBJECTIVE:* Getting started with lua
+- *Reference:*
+  - [[https://www.youtube.com/watch?v=iMacxZQMPXs#__preview][Lua Tutorial @Youtube]]
+  - [[https://www.youtube.com/watch?v=CuWfgiwI73Q#__preview][Everything you need to start with writing in lua @Youtube]]

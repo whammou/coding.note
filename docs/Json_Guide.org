@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID: 49907616-48df-41b7-a851-e6f58001f9bf
+:ROAM_ORIGIN: b73b31dd-5b83-48e2-af73-79ef09c82cc4
+:END:
+#+TITLE: Json Guide
+
+#+OPTIONS: title:nil tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
+#+LATEX_HEADER: \renewcommand\maketitle{} \usepackage[scaled]{helvet} \renewcommand\familydefault{\sfdefault}
+#+TODO: TODO(t) (e) DOING(d) PENDING(p) OUTLINE(o) RESEARCH(s) FEEDBACK(b) WAITING(w) NEXT(n) | IDEA(i) ABORTED(a) PARTIAL(r) REVIEW(v) DONE(f)
+#+FILETAGS: :DOC:PROJECT:CODING:JSON:GUIDE:
+#+HTML:<details>
+
+* PENDING Json Guide :DOC:META:CODING:JSON:GUIDE:
+#+HTML:</details>
+** PENDING Learning jq :JQ:
+- *OBJECTIVE:* Learn jq language to extract json database
+- *Reference:* [[https:ngjqlang.orggtutorial/][Learn jq tutorial @JQ-doc]]
