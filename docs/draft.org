@@ -84,8 +84,8 @@ DEADLINE: <2025-09-26 Fri>
 **** OUTLINE Handling Short and Long Options
 To handle both short and lone options in Bash script
 **** DOING Option Position
-DEADLINE: <2025-09-26 Fri>
+DEADLINE: <2025-09-28 Sun>
 :PROPERTIES:
-:ID: 1963e88a-c26f-4626-904d-72c9080c9055
+:ID:       1963e88a-c26f-4626-904d-72c9080c9055
 :END:
 Handle =options= in the =getopts= command
