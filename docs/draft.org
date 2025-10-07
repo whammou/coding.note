@@ -73,7 +73,7 @@ In addition to the =flag= variable. There are two other important variables: =$O
 However, =getopts= has limitations when it comes to handling long options like =--help= or =--verbose=
 #+END_QUOTE
 *** NEXT Getopt vs Getopts :COMMAND:
-DEADLINE: <2025-10-07 Tue>
+DEADLINE: <2025-10-08 Wed>
 *Checkout:* [[https://ao.bloat.cat/exchange/unix.stackexchange.com/questions/62950/getopt-getopts-or-manual-parsing-what-to-use-when-i-want-to-support-both-shor][Getopt vs Getopts Supporting of Long Options @Overflow]]
 - *POSIX compatibility*
   While =getopts= is a built-in function of =bash= itself, =getopt= is an external program
@@ -84,7 +84,7 @@ DEADLINE: <2025-10-07 Tue>
 **** OUTL Handling Short and Long Options
 To handle both short and lone options in Bash script
 **** DOIN Option Position
-DEADLINE: <2025-10-07 Tue>
+DEADLINE: <2025-10-08 Wed>
 :PROPERTIES:
 :ID:       1963e88a-c26f-4626-904d-72c9080c9055
 :END:
