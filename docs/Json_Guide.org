@@ -10,8 +10,8 @@
 #+FILETAGS: :DOC:PROJECT:CODING:JSON:GUIDE:
 #+HTML:<details>
 
-* PENDING Json Guide :DOC:META:CODING:JSON:GUIDE:
+* PEND Json Guide :DOC:META:CODING:JSON:GUIDE:
 #+HTML:</details>
-** PENDING Learning jq :JQ:
+** PEND Learning jq :JQ:
 - *OBJECTIVE:* Learn jq language to extract json database
 - *Reference:* [[https:ngjqlang.orggtutorial/][Learn jq tutorial @JQ-doc]]

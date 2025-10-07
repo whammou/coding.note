@@ -10,7 +10,7 @@
 #+FILETAGS: :DOC:PROJECT:CODING:LATEX:GUIDE:
 #+HTML:<details>
 
-* PENDING Latex Guide :DOC:META:CODING:LATEX:GUIDE:
+* PEND Latex Guide :DOC:META:CODING:LATEX:GUIDE:
 #+HTML:</details>
 - *OBJECTIVE:* Develop a framwork for latex format/
 - *Reference:* Tutorial documentation for latex

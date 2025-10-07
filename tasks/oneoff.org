@@ -4,22 +4,22 @@
 #+TITLE: Coding Oneoff Tasks
 
 * List of Oneoff Tasks :TASK:ONEOFF:CODING:META:
-** PENDING Working with html :HTML:
+** PEND Working with html :HTML:
 :PROPERTIES:
 :ID:       6440266f-57df-40e2-a9e2-8d0867fcf9f2
 :END:
 - *OBJECTIVE:* Learn basic html
 - *Reference:* [[https://github.com/Asabeneh/30-Days-Of-HTML][30 days of html @Github]]
-** PENDING Learn Regex :REGEX:
+** PEND Learn Regex :REGEX:
 - *OBJECTIVE:* Learn to write regex patterns
-*** PENDING Regex in nvim :NVIM:
+*** PEND Regex in nvim :NVIM:
 - *OBJECTIVE:* Write regular expression with nvim natives
 - *Reference:* [[https://dev.to/iggredible/learning-vim-regex-26ep][Learning nvim regex @Blog]]
 ** DONE Using glob in nvim-lua :LUA:NVIM:
 CLOSED: [2025-08-25 Mon 23:35] DEADLINE: <2025-08-25 Mon>
 + *OBJECTIVE:* Learn to use =glob=/=globpath= to expand =wildcard= in nvim-lua
 + *Reference:* [[https://s0ands0.github.io/100-days-of-code/r001/084-vim-glob/][Vim Glob @Blog]]
-** PENDING Handle exception in python :PYTHON:
+** PEND Handle exception in python :PYTHON:
 - *OBJECTIVE:* Handle exceptions error from populating logs/
 - *Reference:*
   - [[https://m.opnxng.com/@akulahemanth/pythons-contextlib-suppress-a-clean-way-to-handle-exceptions-db7439e32025][Clean way to handle error exception @Blog]]

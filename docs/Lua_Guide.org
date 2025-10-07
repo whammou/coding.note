@@ -10,7 +10,7 @@
 #+FILETAGS: :DOC:PROJECT:CODING:LUA:GUIDE:
 #+HTML:<details>
 
-* OUTLINE Lua Guide :DOC:META:CODING:LUA:GUIDE:
+* OUTL Lua Guide :DOC:META:CODING:LUA:GUIDE:
 #+HTML:</details>
 - *OBJECTIVE:* Learn basic lua language
 - *Reference:* [[https://github.com/pohka/Lua-Beginners-Guide][Lua beginners guide @Github]]

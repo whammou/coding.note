@@ -14,7 +14,7 @@
 [!WARNING]
 Draft items are subjected to change and refile!
 #+END_QUOTE
-** OUTLINE Flag Handling :BASH:BEHAVIOUR:
+** OUTL Flag Handling :BASH:BEHAVIOUR:
 :PROPERTIES:
 :ID:       3ac3b4c9-e075-4345-a2a4-d7b6122983f8
 :END:
@@ -27,7 +27,7 @@ Using =flags= provides several benefits:
   1. *Customization:* Change the scripts /behaviour/ to suit their specific =requirements=
   2. *Flexibility:* Providing different =options=
   3. *Usability:* Well-designed =flags= make /scripts/ more user-friendly
-*** REVIEW The Getopts Command
+*** RVIW The Getopts Command
 CLOSED: [2025-09-17 Wed 21:29]
 In /Bash/, The =getopts= command is a built-in utility for parsing command=line options. It is primarily used to handle short options and their corresponding arguments
 #+NAME:getopts example
@@ -81,9 +81,9 @@ DEADLINE: <2025-10-07 Tue>
   =getopts= limitations is \\
     + it is harder to 
 - *Flexibility*
-**** OUTLINE Handling Short and Long Options
+**** OUTL Handling Short and Long Options
 To handle both short and lone options in Bash script
-**** DOING Option Position
+**** DOIN Option Position
 DEADLINE: <2025-10-07 Tue>
 :PROPERTIES:
 :ID:       1963e88a-c26f-4626-904d-72c9080c9055

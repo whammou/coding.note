@@ -9,7 +9,7 @@
 #+FILETAGS: :DOC:PROJECT:CODING:PYTHON:GUIDE:
 #+HTML:<details>
 
-* PENDING Python Guide [0%] :DOC:META:CODING:PYTHON:GUIDE:
+* PEND Python Guide [0%] :DOC:META:CODING:PYTHON:GUIDE:
 #+HTML:</details>
 - *OBJECTIVE:* /Automantion documentation with python/
 ** Python scripting :SCRIPTING:
@@ -17,7 +17,7 @@
 *** Passing shell arguments :SHELL:
 - *OBJECTIVE:* /Passing argument from shell/
   - *References:* [[https://ao.bloat.cat/exchange/stackoverflow.com/questions/39498702/passing-arguments-to-python-from-shell-script][Passing shell argument to python @Overflow]]
-** PENDING Python virutal enviroment
+** PEND Python virutal enviroment
 - *OBJECTIVE:* /Manage python virtual enviroments/
   - To initiate virtual environment, run =python -m venv <name>=
 - *Visit:* [[https://www.youtube.com/watch?v=IYcTaZfjODg#__preview][Understand python vm @Youtube]]
