@@ -14,20 +14,61 @@
 #+BEGIN_QUOTE
 Bash is a scripting language uses to interact with an operating system and do terminal bash tasks, but can do basic programming like other simple programming language. Its like C but for temrinal
 #+END_QUOTE
-** POSIX Standard
+** DONE POSIX Standard :POSIX:
+CLOSED: [2025-10-08 Wed 17:23]
 POSIX or /Portable Operating System Interface/ is a family of standard specified by the /IEEE Computer Society/ for maintaining compatibility between /operating systems/ 
   +  Defines /application programming interface/ (APIs)
   +  Is a trademark of of the =IEEE=
   +  Is intended to be used to both application and system developers
-** Replace File Content with Bash
-Replacing a file content using bash script
-*** Convert Strings casing
+** DONE Replace Content with Bash
+CLOSED: [2025-10-08 Wed 18:36]
+:PROPERTIES:
+:ID: b3a42fe7-9251-4951-84a9-e5731cfa5d22
+:END:
+When working with large database. Modifying a large amount of files can be a very tedious task. Therefore writing a script to do it for you is more efficient
+*** DONE Convert Strings casing
+CLOSED: [2025-10-08 Wed 18:35]
 To convert a string to =lowercase= or =uppercase= using bash script
 
 #+NAME:Example
-
 #+BEGIN_SRC bash
 string="Hello World"
 echo "$string" | awk '{print tolower($0)}'
 # hello world
 #+END_SRC
+*** DONE Search and Replace Files :BASH:GREP:SED:
+DEADLINE: <2025-10-08 Wed> CLOSED: [2025-10-08 Wed 18:33]
+Sometimes it is necessary to mass replace files content to, one such case is to modify =keys= or =items= in a big code base
++ To search for and matching files content use =grep= or =ripgrep= (better version of =grep=)
+  #+BEGIN_SRC bash
+  rg -F 'foo' --files-with-matches
+  #+END_SRC
+  * =-F= takes argument as /literal strings/
+  * =--files-with-matches= prints out the paths of files with matching pattern
+    
++ To replace the content inside a file, use =sed=
+  #+BEGIN_SRC bash
+  sed -i "s/foo/bar/g"
+  #+END_SRC
+  * =-i= flag tells =sed= to write a string in place of another string
+  * =s/foo/bar/g= tells =sed= to look for pattern =foo= and replace it with =bar=, =/g= means /true/ for every instances
+    
++ Combining =sed= and =grep= to search for matching /patterns/ in files and replace it with another /pattern/
+  #+BEGIN_SRC bash
+  rg -F 'foo' --files-with-matches | xargs sed -i 's/foo/bar/g'
+  #+END_SRC
+  * Basically tell =grep= too look for files with (hidden ones too) with pattern =foo= and pipe it to =sed=. =sed= replace =foo= with =bar=
+    
+#+NAME:For path contain whitespace
+#+BEGIN_QUOTE markdown
+[!TIP]
+If your /path/ contains /whitespace/ in them, you might need to delimit your file paths with a =NUL= terminator
+=$ rg foo --files-with-matches -0 | xargs -0 sed -i 's/foo/bar/g'=
+#+END_QUOTE
+**** DONE Filter Out Results
+DEADLINE: <2025-10-08 Wed> CLOSED: [2025-10-08 Wed 18:33]
+To filter out results. For example if you only want to modify files inside =docs= directory. Pipe the =filenames= through another =grep= and matches them with =docs/= to filter out results within =docs= only
+#+BEGIN_SRC bash
+rg -F foo --files-with-matches | rg '/docs' | xargs sed -i 's/foo/bar/g'
+#+END_SRC
++ This will only modify the files inside of =docs=

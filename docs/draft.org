@@ -14,7 +14,7 @@
 [!WARNING]
 Draft items are subjected to change and refile!
 #+END_QUOTE
-** OUTL Flag Handling :BASH:BEHAVIOUR:
+** OUTL Flag Handling :BASH:GETOPS:
 :PROPERTIES:
 :ID:       3ac3b4c9-e075-4345-a2a4-d7b6122983f8
 :END:
