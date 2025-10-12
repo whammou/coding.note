@@ -4,3 +4,4 @@
 #+TITLE: Coding Planned Tasks
 
 * List of Planned Tasks :TASK:PLANNED:CODING:META:
+** Learning Emacs lisp :EMACS:LISP:learnemacs:
