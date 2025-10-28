@@ -87,3 +87,11 @@ To handle both short and lone options in Bash script
 :ID:       1963e88a-c26f-4626-904d-72c9080c9055
 :END:
 Handle =options= in the =getopts= command
+** Continuous Integration and Continuous Delivery :CICD:
+:PROPERTIES:
+:ID: 0ed7cc0d-f624-4dc3-b186-a7b3818d57f4
+:END:
+In *software engineering* =CI/CD= refers to the practices of =continuous integration= /CI/ and =continuous delivery= /CD/. They are sometimes referred to collectively as continuous development
+- *Continuous integration -* is the practice of integrating source code changes frequently and ensuring that the integrated codebase is in a workable state
+- *Continuous delivery -* is procedure that ensures the developing software can be reliably released at any time. It aims at /building/, /testing/, and /releasing/ with greater speed and frequency
+  
