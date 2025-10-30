@@ -5,10 +5,10 @@
 
 * List of Planned Tasks :TASK:PLANNED:CODING:META:
 ** Learning Emacs lisp :EMACS:LISP:learnemacs:
-** TODO Learn yaml Syntax :YAML:
-DEADLINE: <2025-10-29 Wed>
+** PEND Learn yaml Syntax :YAML:
 :PROPERTIES:
 :ID: 48441bbc-d7a0-42ff-b590-bcf9497d57ef
 :END:
 - *OBJECTIVE:* Learn basic =yaml=
+- *Reference:* [[https://learnxinyminutes.com/yaml/][Learn Yaml in Y Minutes @Blog]]
   
