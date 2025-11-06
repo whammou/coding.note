@@ -12,6 +12,7 @@
 - *Reference:* [[https://github.com/Asabeneh/30-Days-Of-HTML][30 days of html @Github]]
 ** PEND Learn Regex :REGEX:
 - *OBJECTIVE:* Learn to write regex patterns
+- *Reference:* [[https://learnxinyminutes.com/pcre/][Learn PCRE in Y minutes @Blog]]
 *** PEND Regex in nvim :NVIM:
 - *OBJECTIVE:* Write regular expression with nvim natives
 - *Reference:* [[https://dev.to/iggredible/learning-vim-regex-26ep][Learning nvim regex @Blog]]
