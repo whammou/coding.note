@@ -87,11 +87,19 @@ To handle both short and lone options in Bash script
 :ID:       1963e88a-c26f-4626-904d-72c9080c9055
 :END:
 Handle =options= in the =getopts= command
-** Continuous Integration and Continuous Delivery :CICD:
+** OUTL Continuous Integration and Continuous Delivery :CICD:
 :PROPERTIES:
 :ID: 0ed7cc0d-f624-4dc3-b186-a7b3818d57f4
 :END:
 In *software engineering* =CI/CD= refers to the practices of =continuous integration= /CI/ and =continuous delivery= /CD/. They are sometimes referred to collectively as continuous development
 - *Continuous integration -* is the practice of integrating source code changes frequently and ensuring that the integrated codebase is in a workable state
 - *Continuous delivery -* is procedure that ensures the developing software can be reliably released at any time. It aims at /building/, /testing/, and /releasing/ with greater speed and frequency
-  
+** OUTL Variable Naming Convention
+/What are variable naming conventions?/
+/Check-out:/[[https://stackoverflow.com/a/42290320][Variable naming convention @Overlfow]]
+** OUTL Learn Regex in Y Minutes :REGEX:
+:PROPERTIES:
+:ID: bbb1b2dd-c13c-4e49-9b17-6309473514e7
+:END:
+/What is regex/
+/Check-out:/ [[id:79a63bf5-8d7d-48f1-af7e-2ae7998e6161][Learn Regex @Org]]

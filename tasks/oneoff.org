@@ -11,6 +11,9 @@
 - *OBJECTIVE:* Learn basic html
 - *Reference:* [[https://github.com/Asabeneh/30-Days-Of-HTML][30 days of html @Github]]
 ** PEND Learn Regex :REGEX:
+:PROPERTIES:
+:ID: 79a63bf5-8d7d-48f1-af7e-2ae7998e6161
+:END:
 - *OBJECTIVE:* Learn to write regex patterns
 - *Reference:* [[https://learnxinyminutes.com/pcre/][Learn PCRE in Y minutes @Blog]]
 *** PEND Regex in nvim :NVIM:
