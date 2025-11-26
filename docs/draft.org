@@ -14,7 +14,7 @@
 [!WARNING]
 Draft items are subjected to change and refile!
 #+END_QUOTE
-** OUTL Flag Handling :BASH:GETOPS:
+** OUTL Flag Handling :BASH:GETOPS:bashflag:
 :PROPERTIES:
 :ID:       3ac3b4c9-e075-4345-a2a4-d7b6122983f8
 :END:
@@ -83,6 +83,7 @@ However, =getopts= has limitations when it comes to handling long options like =
 **** OUTL Handling Short and Long Options
 To handle both short and lone options in Bash script
 **** OUTL Option Position
+DEADLINE: <2025-11-26 Wed 19:00>
 :PROPERTIES:
 :ID:       1963e88a-c26f-4626-904d-72c9080c9055
 :END:
