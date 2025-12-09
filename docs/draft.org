@@ -83,14 +83,14 @@ However, =getopts= has limitations when it comes to handling long options like =
 **** OUTL Handling Short and Long Options
 To handle both short and lone options in Bash script
 **** OUTL Option Position
-DEADLINE: <2025-12-08 Mon 19:00>
+DEADLINE: <2025-12-09 Tue 19:00>
 :PROPERTIES:
 :ID:       1963e88a-c26f-4626-904d-72c9080c9055
 :END:
 Handle =options= in the =getopts= command
 ** OUTL Continuous Integration and Continuous Delivery :CICD:
 :PROPERTIES:
-:ID: 0ed7cc0d-f624-4dc3-b186-a7b3818d57f4
+:ID:       0ed7cc0d-f624-4dc3-b186-a7b3818d57f4
 :END:
 In *software engineering* =CI/CD= refers to the practices of =continuous integration= /CI/ and =continuous delivery= /CD/. They are sometimes referred to collectively as continuous development
 - *Continuous integration -* is the practice of integrating source code changes frequently and ensuring that the integrated codebase is in a workable state
@@ -100,7 +100,7 @@ In *software engineering* =CI/CD= refers to the practices of =continuous integra
 /Check-out:/[[https://stackoverflow.com/a/42290320][Variable naming convention @Overlfow]]
 ** OUTL Learn Regex in Y Minutes :REGEX:
 :PROPERTIES:
-:ID: bbb1b2dd-c13c-4e49-9b17-6309473514e7
+:ID:       bbb1b2dd-c13c-4e49-9b17-6309473514e7
 :END:
 /What is regex/
 /Check-out:/ [[id:79a63bf5-8d7d-48f1-af7e-2ae7998e6161][Learn Regex @Org]]
