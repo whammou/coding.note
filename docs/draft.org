@@ -83,7 +83,7 @@ However, =getopts= has limitations when it comes to handling long options like =
 **** OUTL Handling Short and Long Options
 To handle both short and lone options in Bash script
 **** OUTL Option Position
-DEADLINE: <2025-12-15 Mon 19:00>
+DEADLINE: <2025-12-16 Tue 19:00>
 :PROPERTIES:
 :ID:       1963e88a-c26f-4626-904d-72c9080c9055
 :END:
@@ -106,7 +106,7 @@ In *software engineering* =CI/CD= refers to the practices of =continuous integra
 /Check-out:/ [[id:79a63bf5-8d7d-48f1-af7e-2ae7998e6161][Learn Regex @Org]]
 ** OUTL Looping Through Content of a File in Bash :LOOPING:
 :PROPERTIES:
-:ID: 1ede1aea-dda4-47c0-9c68-04c5b1ed88dc
+:ID:       1ede1aea-dda4-47c0-9c68-04c5b1ed88dc
 :END:
 /How to loop through content of a file in bash script/ \\
 /Check-out:/ [[https://stackoverflow.com/questions/1521462/looping-through-the-content-of-a-file-in-bash][How to loop through a content of a file with bash @Overflow]]
