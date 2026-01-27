@@ -36,5 +36,8 @@ CLOSED: [2025-07-12 Sat 07:51]
 *** Convert PDF to markdown
 - *OBJECTIVE:* Convert pdf to markdown/
 *** Pandoc conversion :PANDOC:
+:PROPERTIES:
+:ID: 1abf84ee-8c47-4c60-bdca-99627c2a7908
+:END:
 - *OBJECTIVE:* Convert filetype using pandoc
 - *Reference:* [[https://ao.bloat.cat/exchange/stackoverflow.com/questions/56828128/pandoc-is-tex-output-with-dollar-sign-math-possible][Pandoc math filter @Overflow]]
