@@ -83,7 +83,7 @@ However, =getopts= has limitations when it comes to handling long options like =
 **** OUTL Handling Short and Long Options
 To handle both short and lone options in Bash script
 **** OUTL Option Position
-DEADLINE: <2026-02-03 Tue 19:00>
+DEADLINE: <2026-02-04 Wed 19:00>
 :PROPERTIES:
 :ID:       1963e88a-c26f-4626-904d-72c9080c9055
 :END:
