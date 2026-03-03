@@ -1,0 +1,112 @@
+#+TITLE: Coding Document Drafts
+
+#+TODO: TODO(t) (e) DOIN(d) PEND(p) OUTL(o) EXPL(x) FDBK(b) WAIT(w) NEXT(n) IDEA(i) | ABRT(a) PRTL(r) RVIW(v) DONE(f)
+#+OPTIONS: title:nil tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
+#+LATEX_HEADER: \renewcommand\maketitle{} \usepackage[scaled]{helvet} \renewcommand\familydefault{\sfdefault}
+#+FILETAGS: :DOC:DRAFT:CODING:
+#+HTML:<details>
+
+* Document Drafts :DOC:DRAFT:CODING:META:
+#+HTML:</details>
+
+#+NAME:Warning Message
+#+BEGIN_QUOTE
+[!WARNING]
+Draft items are subjected to change and refile!
+#+END_QUOTE
+** OUTL Flag Handling :BASH:GETOPS:bashflag:
+:PROPERTIES:
+:ID:       3ac3b4c9-e075-4345-a2a4-d7b6122983f8
+:END:
+*Checkout:* [[https://m.opnxng.com/@wujido20/handling-flags-in-bash-scripts-4b06b4d0ed04][Mastering Flag Handling in Bash Script @Medium]]
+#+BEGIN_QUOTE
+*Flags*, also know as command-line options, are additional =parameters= passed to a /script/ when it is executed. They modify the /script's/ behaviour or to specify certain settings
+#+END_QUOTE
+
+Using =flags= provides several benefits:
+  1. *Customization:* Change the scripts /behaviour/ to suit their specific =requirements=
+  2. *Flexibility:* Providing different =options=
+  3. *Usability:* Well-designed =flags= make /scripts/ more user-friendly
+*** RVIW The Getopts Command
+CLOSED: [2025-09-17 Wed 21:29]
+In /Bash/, The =getopts= command is a built-in utility for parsing command=line options. It is primarily used to handle short options and their corresponding arguments
+#+NAME:getopts example
+#+BEGIN_SRC bash
+while getoptss "hvf:" flag; do
+ case $flag in
+   h) # Handle the -h flag
+   # Display script help information
+   ;;
+   v) # Handle the -v flag
+   # Enable verbose mode
+   ;;
+   f) # Handle the -f flag with an argument
+   filename=$OPTARG
+   # Process the specified file
+   ;;
+   \?)
+   # Handle invalid options
+   ;;
+ esac
+done
+#+END_SRC
+  - First =argument= is the string containing the option character (=flags=)
+    + Each character represent a valid option
+    + If a character is followed by a colon (=:=). It means the option requires an argument
+  - Second =argument= is the name of the =flag= variable
+    + Store the recognized option character
+    + In each iteration of the =getopts= loop, the current character is stored in the =flags= variable
+
+#+NAME:getopts invalid argument
+#+BEGIN_QUOTE
+[!TIP]
+When the =getopts= command encounters an invalid or unrecofnized option, it assigns =?= to the =flag= variable. The script enters the base block =/?)= to handle this situation
+#+END_QUOTE
+
+In addition to the =flag= variable. There are two other important variables: =$OPTARG= =$OPTIND=
+  - =$OPTARG= stores the value of the option argument associated with the current character
+  - =$OPTIND= is an index variable that represents the index of the next argument to be processed by =getopts=
+
+#+NAME:getopts limitations
+#+BEGIN_QUOTE
+[!NOTE]
+However, =getopts= has limitations when it comes to handling long options like =--help= or =--verbose=
+#+END_QUOTE
+*** OUTL Getopt vs Getopts :COMMAND:
+*Checkout:* [[https://ao.bloat.cat/exchange/unix.stackexchange.com/questions/62950/getopt-getopts-or-manual-parsing-what-to-use-when-i-want-to-support-both-shor][Getopt vs Getopts Supporting of Long Options @Overflow]]
+- *POSIX compatibility*
+  While =getopts= is a built-in function of =bash= itself, =getopt= is an external program
+- *Implementability*
+  =getopts= limitations is \\
+    + it is harder to 
+- *Flexibility*
+**** OUTL Handling Short and Long Options
+To handle both short and lone options in Bash script
+**** OUTL Option Position
+DEADLINE: <2026-02-09 Mon 19:00>
+:PROPERTIES:
+:ID:       1963e88a-c26f-4626-904d-72c9080c9055
+:END:
+Handle =options= in the =getopts= command
+** OUTL Continuous Integration and Continuous Delivery :CICD:
+:PROPERTIES:
+:ID:       0ed7cc0d-f624-4dc3-b186-a7b3818d57f4
+:END:
+In *software engineering* =CI/CD= refers to the practices of =continuous integration= /CI/ and =continuous delivery= /CD/. They are sometimes referred to collectively as continuous development
+- *Continuous integration -* is the practice of integrating source code changes frequently and ensuring that the integrated codebase is in a workable state
+- *Continuous delivery -* is procedure that ensures the developing software can be reliably released at any time. It aims at /building/, /testing/, and /releasing/ with greater speed and frequency
+** OUTL Variable Naming Convention
+/What are variable naming conventions?/
+/Check-out:/[[https://stackoverflow.com/a/42290320][Variable naming convention @Overlfow]]
+** OUTL Learn Regex in Y Minutes :REGEX:
+:PROPERTIES:
+:ID:       bbb1b2dd-c13c-4e49-9b17-6309473514e7
+:END:
+/What is regex/
+/Check-out:/ [[id:79a63bf5-8d7d-48f1-af7e-2ae7998e6161][Learn Regex @Org]]
+** OUTL Looping Through Content of a File in Bash :LOOPING:
+:PROPERTIES:
+:ID:       1ede1aea-dda4-47c0-9c68-04c5b1ed88dc
+:END:
+/How to loop through content of a file in bash script/ \\
+/Check-out:/ [[https://stackoverflow.com/questions/1521462/looping-through-the-content-of-a-file-in-bash][How to loop through a content of a file with bash @Overflow]]
