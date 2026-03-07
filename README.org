@@ -1,0 +1,40 @@
+#+TITLE: Coding – Overview
+#+DESCRIPTION: Programming tutorials and code snippets.
+#+FILETAGS: :CODING:
+
+* Overview
+  Coding resources including tutorials, code snippets, and programming guides.
+
+* Directory Layout
+  | Path          | Purpose                                                          |
+  |---------------+------------------------------------------------------------------|
+  | =README.org=  | This file – high‑level description (you are reading it)           |
+  | =docs/=       | Org/Markdown documents – notes, guides, references                |
+  | =tasks/=      | Task files (`recurring.org`, `oneoff.org`, …)                    |
+  | =lists/=      | Ordered collections (checklists, reference lists) – optional      |
+  | =assets/=     | Images, code samples, or any binary material – optional          |
+  | =.logs/=      | Log file (`log.org`) – chronological change log                  |
+  | =.git/=       | Git submodule (managed by the super‑repo)                         |
+
+* Tag & State Conventions (inherited from the main repo)
+  - *States* – TODO, PEND, GOING, DONE, ARCHIVED, etc. (see main README).
+  - *Tags* – Use the hierarchical tag format:
+    :CODING:<CATEGORY>:<TYPE>:<DETAIL>:
+    Example: =:CODING:TUTORIAL:PYTHON:=
+
+* Typical Files
+  - =docs/<something>.org= – detailed notes, tutorials, or reference material.
+  - =tasks/recurring.org= – regularly‑scheduled coding practice or learning tasks.
+  - =tasks/oneoff.org= – single‑session projects or experiments.
+  - =assets/…= – code files, diagrams, or other assets.
+
+* How to Use
+  1. *Add a note* – create a new Org file under =docs/= and link to it from a task if needed.
+  2. *Create a task* – add a headline under the appropriate file in =tasks/= using the standard TODO states.
+  3. *Tag it* – follow the tag anatomy described above so Org‑mode search works across the whole super‑repo.
+  4. *Commit* – daily commits are encouraged; the super‑repo pulls submodule updates automatically.
+
+* References
+  - Main repository README.org – overall philosophy, state & tag definitions:
+    [[file:../README.org::#STATES and TAGS][Main README – STATES & TAGS]]
+  - External tools: nvim‑orgmode, Orgzly‑android (see main README for integration tips).
