@@ -1,6 +1,6 @@
 #+TITLE: Coding – Overview
 #+DESCRIPTION: Programming tutorials and code snippets.
-#+FILETAGS: :CODING:
+#+FILETAGS: :@Coding:
 
 * Overview
   Coding resources including tutorials, code snippets, and programming guides.
@@ -19,8 +19,8 @@
 * Tag & State Conventions (inherited from the main repo)
   - *States* – TODO, PEND, GOING, DONE, ARCHIVED, etc. (see main README).
   - *Tags* – Use the hierarchical tag format:
-    :CODING:<CATEGORY>:<TYPE>:<DETAIL>:
-    Example: =:CODING:TUTORIAL:PYTHON:=
+    :@Coding:<CATEGORY>:<TYPE>:<DETAIL>:
+    Example: =:@Coding:TUTORIAL:PYTHON:=
 
 * Typical Files
   - =docs/<something>.org= – detailed notes, tutorials, or reference material.

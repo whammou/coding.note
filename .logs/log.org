@@ -3,7 +3,7 @@
 #+OPTIONS: ^:nil
 #+FILETAGS: TEST
 
-* Logs :LOG:CODING:
+* Logs :LOG:@Coding:
 - /Store finished tasks/
 ** DONE Create Latex snippets :LATEX:
 DEADLINE: <2025-07-07 Mon> CLOSED: [2025-07-08 Tue 02:31]
