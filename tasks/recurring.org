@@ -3,7 +3,7 @@
 #+OPTIONS: todo:t tags:nil tasks:t ^:nil toc:nil
 #+TITLE: Coding Recurring Tasks
 
-* List of Recurring Tasks :%Task:_Recurring:CODING:meta:
+* List of Recurring Tasks :typTask:catRecurring:CODING:meta:
 ** PEND Learning lua :LUA:
 - *OBJECTIVE:* Getting started with lua
 - *Reference:*

@@ -7,20 +7,20 @@
 #+OPTIONS: title:nil tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
 #+LATEX_HEADER: \renewcommand\maketitle{} \usepackage[scaled]{helvet} \renewcommand\familydefault{\sfdefault}
 #+TODO: TODO(t) (e) DOIN(d) PEND(p) OUTL(o) EXPL(x) FDBK(b) WAIT(w) NEXT(n) IDEA(i) | ABRT(a) PRTL(r) RVIW(v) DONE(f)
-#+FILETAGS: :%Doc:@Project:CODING:LATEX:GUIDE:
+#+FILETAGS: :typDoc:@Project:CODING:LATEX:GUIDE:
 #+HTML:<details>
 
-* PEND Latex Guide :%Doc:meta:CODING:LATEX:GUIDE:
+* PEND Latex Guide :typDoc:meta:CODING:LATEX:GUIDE:
 #+HTML:</details>
 - *OBJECTIVE:* Develop a framwork for latex format/
 - *Reference:* Tutorial documentation for latex
   - [[https://www.learnlatex.org/en/][Latex for beginner @Learntex]]
   - [[https://www.overleaf.com/learn][Overleaf latex tutorial for beginner @Overleaf]]
-** DONE Setup editor for latex :NVIM:
+** DONE Setup editor for latex :@Nvim:
 CLOSED: [2025-07-12 Sat 07:51]
 - *OBJECTIVE:* Setup nvim to env to write latex in/
   - *Visit:* [[https://github.com/lervag/vimtex][Vimtex plugin @Github]]
-** TODO Files conversion :PANDOC:GEMINI:
+** TODO Files conversion :@Pandoc:GEMINI:
 - [-] *OBJECTIVE:* Convert documents from and to latex/ [50%]
   - [ ] Convert from pdf to latex - Use =Gemini-2.5-pro=
   - [X] Convert from latex to pdf - Use =latexmk= or =pandoc=
@@ -35,7 +35,7 @@ CLOSED: [2025-07-12 Sat 07:51]
 - *Reference:* [[https://www.reddit.com/r/Bard/comments/1bgstvx/suddenly_discovered_latex_on_gemini_web/][Latex on Gemini @Reddit]]
 *** Convert PDF to markdown
 - *OBJECTIVE:* Convert pdf to markdown/
-*** Pandoc conversion :PANDOC:
+*** Pandoc conversion :@Pandoc:
 :PROPERTIES:
 :ID: 1abf84ee-8c47-4c60-bdca-99627c2a7908
 :END:
