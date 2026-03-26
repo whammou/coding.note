@@ -3,7 +3,7 @@
 #+TITLE: Coding Planned Tasks
 
 * List of Planned Tasks :typTask:catPlanned:CODING:meta:
-** Learning Emacs lisp :@Emacs:LISP:learnemacs:
+** Learning Emacs lisp :subEmacs:LISP:learnemacs:
 ** PEND Learn yaml Syntax :YAML:
 :PROPERTIES:
 :ID: 48441bbc-d7a0-42ff-b590-bcf9497d57ef
