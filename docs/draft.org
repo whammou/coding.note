@@ -109,3 +109,24 @@ In *software engineering* =CI/CD= refers to the practices of =continuous integra
 :END:
 /How to loop through content of a file in bash script/ \\
 /Check-out:/ [[https://stackoverflow.com/questions/1521462/looping-through-the-content-of-a-file-in-bash][How to loop through a content of a file with bash @Overflow]]
+** OUTL Formatting Json in Nvim :subNvim:subJson@Format:
+:PROPERTIES:
+:ID: 0d40ee56-9163-4c04-a762-74ddf22f48e6
+:END:
+
+#+name: Description
+#+begin_quote markdown
+Often times programs output large =json= files without newlines or indentions /(is not human readable)/. You can replace the contents of the buffer with output formatted by jq with one command
+#+end_quote
+
+Some techniques to convert unformatted json to a formatted json in =nvim=
+1. Replacing every =,= with =,\r=
+2. Using =jq= externally
+   #+begin_src bash
+   cat input.json | jq . >
+   #+end_src
+3. Open json file with =nvim= and run this command =:%!jq=
+   - Entering command with =:=
+   - Execute a shell command =!=
+   - Command using jq =jq.= or just basic =jq=
+     
