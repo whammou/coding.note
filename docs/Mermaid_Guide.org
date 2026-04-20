@@ -1,0 +1,66 @@
+:PROPERTIES:
+:ID: 4f233eb1-831c-4da0-9bc7-496965424237
+:END:
+#+TITLE: Mermaid Guide
+
+#+OPTIONS: title:nil tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
+#+TODO: TODO(t) (e) DOIN(d) PROG(g) PEND(p) OUTL(o) EXPL(x) FDBK(b) WAIT(w) NEXT(n) IDEA(i) | ABRT(a) PRTL(r) RVIW(v) DONE(f)
+#+FILETAGS: :typDoc:meta:CODING:subMermaid:
+#+HTML:<details>
+* Mermaid Guide :typDoc:meta:CODING:subMermaid:
+
+#+HTML:</details>
+** PROG Mermaid Diagram Syntax :subMermaid@Syntax:
+:PROPERTIES:
+:ID: f1771d7f-f12c-439e-90b3-a8c3f35564db
+:CUSTOM_ID: diagram-syntax
+:END:
+
+#+name: Description
+#+begin_quote org
+Mermaid's syntax is used to create diagrams. =syntax=, together with =deployment= and =configuration= constitute the whole of mermaid
+#+end_quote
+
+Diagrams examples can be found in the [[https://mermaid.live][Mermaid Live Editor]]
+*** DONE Syntax Structure
+CLOSED: [2026-04-20 Mon 21:38]
+:PROPERTIES:
+:ID: 50a2d97a-1c3f-4132-985b-7888563ce7d6
+:CUSTOM_ID: syntax-structure
+:END:
+- All =diagrams definitions= begin with a declaration of =diagram type= /-> Notify the parser which kind of diagram to generate/
+- Followed by the =definitions= of the diagram and its content
+  
+#+name: Exception Warning
+#+begin_quote org
+[!WARNING]
+The only exception to this is a [[frontmatter-of-diagram-code][Frontmatter]] configuration
+#+end_quote
+
+#+name: Breaking Diagram
+#+begin_quote org
+[!CAUTION]
+Unknown words and misspellings will break a diagram, while parameters silently fail.
+#+end_quote
+
+*Example:* The code below is for an Entity Relationship Diagram, specified by the =erDiagram= declarations. What follows is the definition of different =Entities= represented in it
+
+#+name: Entity Relationship Diagram
+#+begin_src mermaid
+erDiagram
+          CUSTOMER }|..|{ DELIVERY-ADDRESS : has
+          CUSTOMER ||--o{ ORDER : places
+          CUSTOMER ||--o{ INVOICE : "liable for"
+          DELIVERY-ADDRESS ||--o{ ORDER : receives
+          INVOICE ||--|{ ORDER : covers
+          ORDER ||--|{ ORDER-ITEM : includes
+          PRODUCT-CATEGORY ||--|{ PRODUCT : contains
+          PRODUCT ||--o{ ORDER-ITEM : "ordered in"
+#+end_src
+
+*** OUTL Frontmatter of Diagram Code
+:PROPERTIES:
+:ID: 0fc2dccc-78a0-417f-a514-b05596cd255a
+:CUSTOM_ID: frontmatter-of-diagram-code
+:END:
+

@@ -129,4 +129,3 @@ Some techniques to convert unformatted json to a formatted json in =nvim=
    - Entering command with =:=
    - Execute a shell command =!=
    - Command using jq =jq.= or just basic =jq=
-     
