@@ -75,6 +75,33 @@ gantt
         House : 1986, 3y
 #+end_src
 
+#+begin_src mermaid
+---
+config:
+  layout: elk
+  look: handDrawn
+  theme: dark
+---
+flowchart TB
+  A[Start] --> B{Decision}
+  B -->|Yes| C[Continue]
+  B -->|No| D[Stop]
+#+end_src
+
+#+begin_src mermaid
+---
+config:
+  layout: elk
+  elk:
+    mergeEdges: true
+    nodePlacementStrategy: LINEAR_SEGMENTS
+---
+flowchart LR
+  A[Start] --> B{Choose Path}
+  B -->|Option 1| C[Path 1]
+  B -->|Option 2| D[Path 2]
+#+end_src
+
 *** OUTL Frontmatter of Diagram Code
 :PROPERTIES:
 :ID: 0fc2dccc-78a0-417f-a514-b05596cd255a
