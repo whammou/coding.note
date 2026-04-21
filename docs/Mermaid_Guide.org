@@ -143,6 +143,226 @@ gantt
     Add another diagram to demo page    :48h
 #+end_src
 
+#+begin_src mermaid
+---
+config:
+  pie:
+    textPosition: 0.5
+  themeVariables:
+    pieOuterStrokeWidth: "5px"
+---
+pie showData
+    title Key elements in Product X
+    "Calcium" : 42.96
+    "Potassium" : 50.05
+    "Magnesium" : 10.01
+    "Iron" :  5
+#+end_src
+
+#+begin_src mermaid
+quadrantChart
+  title Reach and engagement of campaigns
+  x-axis Low Reach --> High Reach
+  y-axis Low Engagement --> High Engagement
+  quadrant-1 We should expand
+  quadrant-2 Need to promote
+  quadrant-3 Re-evaluate
+  quadrant-4 May be improved
+  Campaign A: [0.9, 0.0]
+  Campaign B: [0.8, 0.1]
+  Campaign C: [0.7, 0.2]
+  Campaign D: [0.6, 0.3]
+  Campaign E: [0.5, 0.4]
+  Campaign F: [0.4, 0.5]
+#+end_src
+
+#+begin_src mermaid
+requirementDiagram
+
+requirement test_req {
+id: 1
+text: the test text.
+risk: high
+verifymethod: test
+}
+
+functionalRequirement test_req2 {
+id: 1.1
+text: the second test text.
+risk: low
+verifymethod: inspection
+}
+
+performanceRequirement test_req3 {
+id: 1.2
+text: the third test text.
+risk: medium
+verifymethod: demonstration
+}
+
+interfaceRequirement test_req4 {
+id: 1.2.1
+text: the fourth test text.
+risk: medium
+verifymethod: analysis
+}
+
+physicalRequirement test_req5 {
+id: 1.2.2
+text: the fifth test text.
+risk: medium
+verifymethod: analysis
+}
+
+designConstraint test_req6 {
+id: 1.2.3
+text: the sixth test text.
+risk: medium
+verifymethod: analysis
+}
+
+element test_entity {
+type: simulation
+}
+
+element test_entity2 {
+type: word doc
+docRef: reqs/test_entity
+}
+
+element test_entity3 {
+type: "test suite"
+docRef: github.com/all_the_tests
+}
+
+
+test_entity - satisfies -> test_req2
+test_req - traces -> test_req2
+test_req - contains -> test_req3
+test_req3 - contains -> test_req4
+test_req4 - derives -> test_req5
+test_req5 - refines -> test_req6
+test_entity3 - verifies -> test_req5
+test_req <- copies - test_entity2
+#+end_src
+
+#+begin_src mermaid
+---
+config:
+  logLevel: 'debug'
+  theme: 'base'
+---
+      gitGraph
+        commit
+        branch hotfix
+        checkout hotfix
+        commit
+        branch develop
+        checkout develop
+        commit id:"ash" tag:"abc"
+        branch featureB
+        checkout featureB
+        commit type:HIGHLIGHT
+        checkout main
+        checkout hotfix
+        commit type:NORMAL
+        checkout develop
+        commit type:REVERSE
+        checkout featureB
+        commit
+        checkout main
+        merge hotfix
+        checkout featureB
+        commit
+        checkout develop
+        branch featureA
+        commit
+        checkout develop
+        merge hotfix
+        checkout featureA
+        commit
+        checkout featureB
+        commit
+        checkout develop
+        merge featureA
+        branch release
+        checkout release
+        commit
+        checkout main
+        commit
+        checkout release
+        merge main
+        checkout develop
+        merge release
+#+end_src
+
+#+begin_src mermaid
+C4Context
+  title System Context diagram for Internet Banking System
+  Enterprise_Boundary(b0, "BankBoundary0") {
+    Person(customerA, "Banking Customer A", "A customer of the bank, with personal bank accounts.")
+    Person(customerB, "Banking Customer B")
+    Person_Ext(customerC, "Banking Customer C", "desc")
+
+    Person(customerD, "Banking Customer D", "A customer of the bank, <br/> with personal bank accounts.")
+
+    System(SystemAA, "Internet Banking System", "Allows customers to view information about their bank accounts, and make payments.")
+
+    Enterprise_Boundary(b1, "BankBoundary") {
+
+      SystemDb_Ext(SystemE, "Mainframe Banking System", "Stores all of the core banking information about customers, accounts, transactions, etc.")
+
+      System_Boundary(b2, "BankBoundary2") {
+        System(SystemA, "Banking System A")
+        System(SystemB, "Banking System B", "A system of the bank, with personal bank accounts. next line.")
+      }
+
+      System_Ext(SystemC, "E-mail system", "The internal Microsoft Exchange e-mail system.")
+      SystemDb(SystemD, "Banking System D Database", "A system of the bank, with personal bank accounts.")
+
+      Boundary(b3, "BankBoundary3", "boundary") {
+        SystemQueue(SystemF, "Banking System F Queue", "A system of the bank.")
+        SystemQueue_Ext(SystemG, "Banking System G Queue", "A system of the bank, with personal bank accounts.")
+      }
+    }
+  }
+
+  BiRel(customerA, SystemAA, "Uses")
+  BiRel(SystemAA, SystemE, "Uses")
+  Rel(SystemAA, SystemC, "Sends e-mails", "SMTP")
+  Rel(SystemC, customerA, "Sends e-mails to")
+
+  UpdateElementStyle(customerA, $fontColor="red", $bgColor="grey", $borderColor="red")
+  UpdateRelStyle(customerA, SystemAA, $textColor="blue", $lineColor="blue", $offsetX="5")
+  UpdateRelStyle(SystemAA, SystemE, $textColor="blue", $lineColor="blue", $offsetY="-10")
+  UpdateRelStyle(SystemAA, SystemC, $textColor="blue", $lineColor="blue", $offsetY="-40", $offsetX="-50")
+  UpdateRelStyle(SystemC, customerA, $textColor="red", $lineColor="red", $offsetX="-50", $offsetY="20")
+
+  UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")
+
+
+#+end_src
+
+#+begin_src mermaid
+mindmap
+  root((mindmap))
+    Origins
+      Long history
+      ::icon(fa fa-book)
+      Popularisation
+        British popular psychology author Tony Buzan
+    Research
+      On effectiveness<br/>and features
+      On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
+#+end_src
+
 *** OUTL Frontmatter of Diagram Code
 :PROPERTIES:
 :ID: 0fc2dccc-78a0-417f-a514-b05596cd255a
