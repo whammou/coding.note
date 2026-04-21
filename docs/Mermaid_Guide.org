@@ -376,9 +376,9 @@ One should beware that the use of some words or symbols that can break diagrams.
 
 | Diagram Breakers   | Reason                                                             | Solution                                         |
 |--------------------+--------------------------------------------------------------------+--------------------------------------------------|
-| =comments=         |                                                                    |                                                  |
-| ~%%(``)%%~         | Similar to Directive confuses the renderer                         | In comments using =%%=, avoid using "{}"         |
-| =flow-charts=      |                                                                    |                                                  |
+| comments           | N A                                                                | N A                                              |
+| %%(``)%%           | Similar to Directive confuses the renderer                         | In comments using %%, avoid using "{}"           |
+| flow-charts        | N A                                                                | N A                                              |
 | 'end'              | The word "End" can cause flowcharts and Sequence diagrams to break | wrap them in quotation marks to prevent breakage |
 | Nodes inside Nodes | Mermaid gets confused with nested shapes                           | wrap them quotation marks to prevent breaking    |
 
