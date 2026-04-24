@@ -34,7 +34,7 @@ CLOSED: [2026-04-20 Mon 21:38]
 #+name: Exception Warning
 #+begin_quote org
 [!WARNING]
-The only exception to this is a [[frontmatter-of-diagram-code][Frontmatter]] configuration
+The only exception to this is a [[#frontmatter-of-diagram-code][Frontmatter]] configuration
 #+end_quote
 
 #+name: Breaking Diagram
