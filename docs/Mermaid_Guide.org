@@ -351,9 +351,9 @@ Using the word "end" (in all lowercase) in a Flowchart node will break the flowc
 #+name: Warning Admonition - letter breakcase
 #+begin_quote org
 [!WARNING]
-If using the letter "o" or "x" as the first letter in a connecting flowchart, add a space before the letter or capitalize the letter (e.g.g, "dev--- ops", "dev---Ops")
-- Typing "A---oB" will create a circle node
-- Typing "A---xB" will create a cross node
+If using the letter "o" or "x" as the first letter in a connecting flowchart, add a space before the letter or capitalize the letter (e.g.g, "dev--- ops", "dev---Ops").\\
+Typing "A---oB" will create a circle node.\\
+Typing "A---xB" will create a cross node
 #+end_quote
 
 #+name: Flowchart example
@@ -455,3 +455,5 @@ gantt
         Iron  : 1982, 3y
         House : 1986, 3y
 #+end_src
+
+
