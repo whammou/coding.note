@@ -333,7 +333,7 @@ mindmap
       Mermaid
 #+end_src
 
-**** Flowcharts Diagrams
+**** Flowcharts Diagrams :subMermaid@Diagram@Flowchart:
 :PROPERTIES:
 :ID: 3450a0b4-944d-4ea3-929c-09464cdbd232
 :CUSTOM_ID: flowcharts-diagrams
@@ -341,6 +341,22 @@ mindmap
 
 Flowcharts are composed of =nodes= (geometric shapes) and =edges= (arrow and lines). The mermaid code defines how nodes and edges are made and accommodates different arrow types
 
+
+#+name: Warning Admonition - breakcase
+#+begin_quote org
+[!WARNING]
+Using the word "end" (in all lowercase) in a Flowchart node will break the flowchart. To workaround use the entire word of any of the letters (e.g., "End" or "END")
+#+end_quote
+
+#+name: Warning Admonition - letter breakcase
+#+begin_quote org
+[!WARNING]
+If using the letter "o" or "x" as the first letter in a connecting flowchart, add a space before the letter or capitalize the letter (e.g.g, "dev--- ops", "dev---Ops")
+- Typing "A---oB" will create a circle node
+- Typing "A---xB" will create a cross node
+#+end_quote
+
+#+name: Flowchart example
 #+begin_src mermaid
 ---
 config:
@@ -352,6 +368,50 @@ flowchart TB
   A[Start] --> B{Decision}
   B -->|Yes| C[Continue]
   B -->|No| D[Stop]
+#+end_src
+***** Default Node
+:PROPERTIES:
+:ID: e204e1bd-88ad-48e9-8782-9ee9fbd39e0a
+:END:
+
+#+name: Default Node
+#+begin_src mermaid
+---
+title: Node
+---
+flowchart LR
+  id
+#+end_src
+
+#+name: Tip Admonition - Flowchart char alternative
+#+begin_quote org
+[!TIP]
+Instead of using =flowchart= one can also use =graph=
+#+end_quote
+***** A Node With Text
+:PROPERTIES:
+:ID: 69eef6c7-4b2a-4d4a-b536-4c6d928e5f0e
+:END:
+
+#+name: Tip Admonition - Define Node
+#+begin_quote org
+[!TIP]
+It is also possible to set text in the box that differs from the id. If this is done several times, it is the last text found for the node that will be used. Also if define edges for the node later, you can omit text definitions. The one previously defined will be used when rendering the box
+#+end_quote
+
+#+name: Tip Admonition - Unicode text
+#+begin_quote org
+[!TIP]
+Use ="= to enclose the unicode text
+#+end_quote
+
+#+name: Define Text
+#+begin_src mermaid
+---
+title: Node with Text
+---
+flowchart LR
+  id1[This is the rendered text in the box]
 #+end_src
 
 *** Diagram Breaking
