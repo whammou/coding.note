@@ -341,7 +341,6 @@ mindmap
 
 Flowcharts are composed of =nodes= (geometric shapes) and =edges= (arrow and lines). The mermaid code defines how nodes and edges are made and accommodates different arrow types
 
-
 #+name: Warning Admonition - breakcase
 #+begin_quote org
 [!WARNING]
