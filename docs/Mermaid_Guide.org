@@ -22,7 +22,7 @@ Mermaid's syntax is used to create diagrams. =syntax=, together with =deployment
 #+end_quote
 
 Diagrams examples can be found in the [[https://mermaid.live][Mermaid Live Editor]]
-*** DONE Syntax Structure
+*** DONE Syntax Structure :content:
 CLOSED: [2026-04-20 Mon 21:38]
 :PROPERTIES:
 :ID: 50a2d97a-1c3f-4132-985b-7888563ce7d6
@@ -56,36 +56,6 @@ erDiagram
           ORDER ||--|{ ORDER-ITEM : includes
           PRODUCT-CATEGORY ||--|{ PRODUCT : contains
           PRODUCT ||--o{ ORDER-ITEM : "ordered in"
-#+end_src
-
-#+name: Fontmatter Example
-#+begin_src mermaid
----
-title: Frontmatter Example
-displayMode: compact
-config:
-  theme: forest
-gantt:
-    useWidth: 400
-    compact: true
----
-gantt
-    section Waffle
-        Iron  : 1982, 3y
-        House : 1986, 3y
-#+end_src
-
-#+begin_src mermaid
----
-config:
-  layout: elk
-  look: handDrawn
-  theme: dark
----
-flowchart TB
-  A[Start] --> B{Decision}
-  B -->|Yes| C[Continue]
-  B -->|No| D[Stop]
 #+end_src
 
 #+begin_src mermaid
@@ -363,6 +333,27 @@ mindmap
       Mermaid
 #+end_src
 
+**** Flowcharts Diagrams
+:PROPERTIES:
+:ID: 3450a0b4-944d-4ea3-929c-09464cdbd232
+:CUSTOM_ID: flowcharts-diagrams
+:END:
+
+Flowcharts are composed of =nodes= (geometric shapes) and =edges= (arrow and lines). The mermaid code defines how nodes and edges are made and accommodates different arrow types
+
+#+begin_src mermaid
+---
+config:
+  layout: elk
+  look: handDrawn
+  theme: dark
+---
+flowchart TB
+  A[Start] --> B{Decision}
+  B -->|Yes| C[Continue]
+  B -->|No| D[Stop]
+#+end_src
+
 *** Diagram Breaking
 :PROPERTIES:
 :ID: 121b937d-d5fe-4aef-bd83-69b09b3bd1a6
@@ -388,3 +379,19 @@ One should beware that the use of some words or symbols that can break diagrams.
 :CUSTOM_ID: frontmatter-of-diagram-code
 :END:
 
+#+name: Fontmatter Example
+#+begin_src mermaid
+---
+title: Frontmatter Example
+displayMode: compact
+config:
+  theme: forest
+gantt:
+    useWidth: 400
+    compact: true
+---
+gantt
+    section Waffle
+        Iron  : 1982, 3y
+        House : 1986, 3y
+#+end_src
