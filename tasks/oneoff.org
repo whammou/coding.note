@@ -18,10 +18,6 @@
 *** PEND Regex in nvim :subNvim:
 - *OBJECTIVE:* Write regular expression with nvim natives
 - *Reference:* [[https://dev.to/iggredible/learning-vim-regex-26ep][Learning nvim regex @Blog]]
-** DONE Using glob in nvim-lua :LUA:subNvim:
-CLOSED: [2025-08-25 Mon 23:35] DEADLINE: <2025-08-25 Mon>
-+ *OBJECTIVE:* Learn to use =glob=/=globpath= to expand =wildcard= in nvim-lua
-+ *Reference:* [[https://s0ands0.github.io/100-days-of-code/r001/084-vim-glob/][Vim Glob @Blog]]
 ** PEND Handle exception in python :PYTHON:
 - *OBJECTIVE:* Handle exceptions error from populating logs/
 - *Reference:*

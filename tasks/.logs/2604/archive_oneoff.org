@@ -1,0 +1,11 @@
+* DONE Using glob in nvim-lua :LUA:subNvim:
+CLOSED: [2025-08-25 Mon 23:35] DEADLINE: <2025-08-25 Mon>
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-04-30 Thu 21:21
+:ARCHIVE_FILE: /home/whammou/Journal/topics/coding/tasks/oneoff.org
+:ARCHIVE_OLPATH: List of Oneoff Tasks
+:ARCHIVE_CATEGORY: oneoff
+:ARCHIVE_TODO: DONE
+:END:
++ *OBJECTIVE:* Learn to use =glob=/=globpath= to expand =wildcard= in nvim-lua
++ *Reference:* [[https://s0ands0.github.io/100-days-of-code/r001/084-vim-glob/][Vim Glob @Blog]]
