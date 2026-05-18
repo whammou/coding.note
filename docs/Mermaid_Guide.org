@@ -22,6 +22,39 @@ Mermaid's syntax is used to create diagrams. =syntax=, together with =deployment
 #+end_quote
 
 Diagrams examples can be found in the [[https://mermaid.live][Mermaid Live Editor]]
+
+#+begin_src mermaid
+flowchart TB
+    subgraph CLIENT[" Client Machine (Kali)"]
+        APP[" Application<br/>(Browser/Tool)"] -->|"traffic"| SSH_PROXY[" SSH SOCKS Proxy<br/>Port 9090"]
+        SSH_PROXY -->|"SSH tunnel (encrypted)"| STUNNEL_CLIENT[" Stunnel Client<br/>accept=9443<br/>→ connects to domain:443"]
+        STUNNEL_CLIENT -->|"SSL/TLS (port 443)<br/>looks like normal HTTPS"| PUBLIC_NET
+    end
+
+    subgraph PUBLIC_NET[" Public Internet / Firewall"]
+        FW[" Firewall<br/>Port 443 allowed<br/>Traffic looks like HTTPS"]
+    end
+
+    subgraph SERVER[" Reverse Proxy Server (Ubuntu VPS)"]
+        STUNNEL_SERVER[" Stunnel Server<br/>accept=0.0.0.0:443<br/>→ forward to localhost:22"]
+        SSH_SERVER[" SSH Server (port 22)<br/>Receives SSH tunnel"]
+        STUNNEL_SERVER -->|"decrypts & forwards"| SSH_SERVER
+        SSH_SERVER -->|"routes traffic"| TARGET[" Target / Internet"]
+    end
+
+    PUBLIC_NET --> STUNNEL_SERVER
+
+    subgraph LAYERS["Protocol Stack (Nested Tunnels)"]
+        L1["Layer 3: Application Traffic<br/>(HTTP, RDP, whatever)"]
+        L2["Layer 2: SSH Tunnel<br/>(encrypted, carries app traffic)"]
+        L3["Layer 1: SSL/TLS via Stunnel<br/>(encrypted, on port 443)"]
+    end
+
+    APP -.-> L1
+    SSH_PROXY -.-> L2
+    STUNNEL_CLIENT -.-> L3
+#+end_src
+
 *** DONE Syntax Structure :content:
 CLOSED: [2026-04-20 Mon 21:38]
 :PROPERTIES:
