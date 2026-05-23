@@ -46,6 +46,28 @@ Unknown words and misspellings will break a diagram, while parameters silently f
 
 *Example:* The code below is for an Entity Relationship Diagram, specified by the =erDiagram= declarations. What follows is the definition of different =Entities= represented in it
 
+#+name: Samba write-flow
+#+begin_src mermaid
+flowchart TD
+    Start[" Windows client writes file"] --> Auth[" Authenticate via passdb.tdb"]
+    Auth --> CheckShare[" Check share: guest ok? read only? valid users?"]
+    CheckShare --> ForceUser[" Map to Unix user<br/><code>force user = whammou</code>"]
+    ForceUser --> FSCheck[" OS checks filesystem permissions"]
+    FSCheck --> CalcPerms[" Calculate final permissions<br/><code>(0777 & 0644) | 0000 = 0644</code>"]
+    CalcPerms --> Create[" Create file<br/><code>-rw-r--r-- whammou:whammou foo.txt</code>"]
+    Create --> XAttr[" Store DOS attributes in xattr"]
+    XAttr --> Done[" Done"]
+    style Start fill:#1a1a2e,stroke:#e94560,color:#eee
+    style Done fill:#1a1a2e,stroke:#0f0,color:#eee
+    style Auth fill:#16213e,stroke:#e94560,color:#eee
+    style CheckShare fill:#16213e,stroke:#e94560,color:#eee
+    style ForceUser fill:#0f3460,stroke:#533483,color:#eee
+    style FSCheck fill:#0f3460,stroke:#533483,color:#eee
+    style CalcPerms fill:#0f3460,stroke:#533483,color:#eee
+    style Create fill:#0f3460,stroke:#533483,color:#eee
+    style XAttr fill:#0f3460,stroke:#533483,color:#eee
+#+end_src
+
 #+name: Entity Relationship Diagram
 #+begin_src mermaid
 erDiagram
