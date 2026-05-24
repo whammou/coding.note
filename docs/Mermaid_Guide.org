@@ -45,6 +45,100 @@ Unknown words and misspellings will break a diagram, while parameters silently f
 #+end_quote
 
 *Example:* The code below is for an Entity Relationship Diagram, specified by the =erDiagram= declarations. What follows is the definition of different =Entities= represented in it
+#+name: Offline Email Workflow
+#+begin_src mermaid
+---
+title: Offline Email Workflow — mbsync + notmuch + neomutt + goimapnotify
+---
+flowchart TB
+    subgraph Remote["  Gmail (Remote)"]
+        IMAP[("  IMAP<br/>imap.gmail.com:993")]
+        SMTP[("  SMTP<br/>smtp.gmail.com:587")]
+    end
+    subgraph Notify["  Push Notification Layer"]
+        direction TB
+        GIN["goimapnotify<br/>(3 systemd --user services)"]:::service
+        CFG_GI["~/.config/imapnotify/<br/>{account}.yaml"]:::config
+        GIN -->|watches via IMAP IDLE| IMAP
+        IMAP -->|IDLE notification (new/deleted/updated)| GIN
+    end
+    subgraph Sync["  Sync Layer"]
+        direction TB
+        MBS["mbsync (isync)"]
+        MBSRC["~/.mbsyncrc"]:::config
+        MBS --- MBSRC
+    end
+    subgraph Storage["  Local Mail Storage"]
+        direction TB
+        subgraph Account1["khoabui.ld99@gmail.com (195M)"]
+            KD1["~/Mail/khoabui.ld99/<br/>INBOX/  [Gmail]/  Blocked/  Later/  mail/"]
+            KD_MBS[".khoabui.ld99.mbsync/<br/>state dir"]
+        end
+        subgraph Account2["mckaysbackup@gmail.com (128M)"]
+            MB1["~/Mail/mckaysbackup/<br/>INBOX/  School/  mail/"]
+            MB_MBS[".mckaysbackup.mbsync/<br/>state dir"]
+        end
+        subgraph Account3["dev.whammou@gmail.com (3.5M)"]
+            DW1["~/Mail/dev.whammou/<br/>INBOX/  [Gmail]/  mail/"]
+            DW_MBS[".dev.whammou.mbsync/<br/>state dir"]
+        end
+    end
+    subgraph Index["  Indexing & Search"]
+        NM_DB[("notmuch database<br/>~/.notmuch-config<br/>db.path = ~/Mail<br/>2775 indexed")]:::db
+        NM_HOOKS["notmuch hooks<br/>~/.notmuch/hooks/<br/>  post-new: NOT CONFIGURED"]:::config
+    end
+    subgraph MUA["  MUA - neomutt"]
+        direction TB
+        NEOMUTTRC["neomuttrc"]:::config
+        ACC1["account1 (khoabui.ld99)"]:::config
+        ACC2["account2 (mckaysbackup)"]:::config
+        ACC3["account3 (dev.whammou)"]:::config
+        subgraph Switch["Switch"]
+            F2, F3, F4
+        end
+    end
+    subgraph Desktop["  Desktop Notification"]
+        NOTIFY["notify-new-mail (notify-send)"]
+    end
+    %% Incoming
+    GIN -->|onNewMail| MBS
+    MBS -->|fetch IMAP| Account1
+    MBS -->|fetch IMAP| Account2
+    MBS -->|fetch IMAP| Account3
+    GIN -->|onNewMailPost| NOTIFY
+    NOTIFY -.->|greps From/Subject| Account1
+    NOTIFY -.->|greps From/Subject| Account2
+    NOTIFY -.->|greps From/Subject| Account3
+    %% Gap: no auto-index
+    Account1 -.->|"  notmuch new NOT triggered"| NM_DB
+    Account2 -.->|"  notmuch new NOT triggered"| NM_DB
+    Account3 -.->|"  notmuch new NOT triggered"| NM_DB
+    %% Query
+    NM_DB -.->|/ and l search| NEOMUTTRC
+    %% Read
+    NEOMUTTRC --> ACC1
+    NEOMUTTRC --> ACC2
+    NEOMUTTRC --> ACC3
+    ACC1 -->|folder = ~/Mail/khoabui.ld99| Account1
+    ACC2 -->|folder = ~/Mail/mckaysbackup| Account2
+    ACC3 -->|folder = ~/Mail/dev.whammou| Account3
+    NEOMUTTRC --> Switch
+    F2 --> ACC1
+    F3 --> ACC2
+    F4 --> ACC3
+    %% Send
+    ACC1 -->|sendmail = msmtp| MSMTP["msmtp"]
+    ACC2 -->|sendmail = msmtp| MSMTP
+    ACC3 -->|sendmail = msmtp| MSMTP
+    MSMTP --> SMTP
+    %% Leakage
+    Account1 -.->|"  .mbsync dupes leak into DB"| NM_DB
+    Account2 -.->|"  .mbsync dupes leak into DB"| NM_DB
+    Account3 -.->|"  .mbsync dupes leak into DB"| NM_DB
+    classDef service fill:#1a73e8,color:#fff,stroke:#0d47a1
+    classDef config fill:#f5f5f5,color:#333,stroke:#bbb
+    classDef db fill:#2e7d32,color:#fff,stroke:#1b5e20
+#+end_src
 
 #+name: Samba write-flow
 #+begin_src mermaid
