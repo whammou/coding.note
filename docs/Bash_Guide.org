@@ -10,13 +10,13 @@
 #+BEGIN_QUOTE
 Bash is a scripting language uses to interact with an operating system and do terminal bash tasks, but can do basic programming like other simple programming language. Its like C but for temrinal
 #+END_QUOTE
-* DONE POSIX Standard :POSIX:
+* DONE [#A] POSIX Standard :POSIX:
 CLOSED: [2025-10-08 Wed 17:23]
 POSIX or /Portable Operating System Interface/ is a family of standard specified by the /IEEE Computer Society/ for maintaining compatibility between /operating systems/ 
 +  Defines /application programming interface/ (APIs)
 +  Is a trademark of of the =IEEE=
 +  Is intended to be used to both application and system developers
-* DONE Replace Content with Bash
+* DONE [#A] Replace Content with Bash
 CLOSED: [2025-10-08 Wed 18:36]
 :PROPERTIES:
 :ID: b3a42fe7-9251-4951-84a9-e5731cfa5d22
