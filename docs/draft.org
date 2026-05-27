@@ -3,7 +3,7 @@
 #+TODO: TODO(t) (e) DOIN(d) PROG(g) PEND(p) OUTL(o) EXPL(x) FDBK(b) WAIT(w) NEXT(n) IDEA(i) | ABRT(a) PRTL(r) RVIW(v) DONE(f)
 #+OPTIONS: title:nil tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
 #+FILETAGS: :typDoc:catDraft:CODING:
-* OUTL Flag Handling :BASH:GETOPS:bashflag:
+* OUTL [#A] Flag Handling :BASH:GETOPS:bashflag:
 :PROPERTIES:
 :ID:       3ac3b4c9-e075-4345-a2a4-d7b6122983f8
 :END:
@@ -77,29 +77,29 @@ DEADLINE: <2026-02-09 Mon 19:00>
 :ID:       1963e88a-c26f-4626-904d-72c9080c9055
 :END:
 Handle =options= in the =getopts= command
-* OUTL Continuous Integration and Continuous Delivery :CICD:
+* OUTL [#A] Continuous Integration and Continuous Delivery :CICD:
 :PROPERTIES:
 :ID:       0ed7cc0d-f624-4dc3-b186-a7b3818d57f4
 :END:
 In *software engineering* =CI/CD= refers to the practices of =continuous integration= /CI/ and =continuous delivery= /CD/. They are sometimes referred to collectively as continuous development
 - *Continuous integration -* is the practice of integrating source code changes frequently and ensuring that the integrated codebase is in a workable state
 - *Continuous delivery -* is procedure that ensures the developing software can be reliably released at any time. It aims at /building/, /testing/, and /releasing/ with greater speed and frequency
-* OUTL Variable Naming Convention
+* OUTL [#A] Variable Naming Convention
 /What are variable naming conventions?/
 /Check-out:/[[https://stackoverflow.com/a/42290320][Variable naming convention @Overlfow]]
-* OUTL Learn Regex in Y Minutes :REGEX:
+* OUTL [#A] Learn Regex in Y Minutes :REGEX:
 :PROPERTIES:
 :ID:       bbb1b2dd-c13c-4e49-9b17-6309473514e7
 :END:
 /What is regex/
 /Check-out:/ [[id:79a63bf5-8d7d-48f1-af7e-2ae7998e6161][Learn Regex @Org]]
-* OUTL Looping Through Content of a File in Bash :LOOPING:
+* OUTL [#A] Looping Through Content of a File in Bash :LOOPING:
 :PROPERTIES:
 :ID:       1ede1aea-dda4-47c0-9c68-04c5b1ed88dc
 :END:
 /How to loop through content of a file in bash script/ \\
 /Check-out:/ [[https://stackoverflow.com/questions/1521462/looping-through-the-content-of-a-file-in-bash][How to loop through a content of a file with bash @Overflow]]
-* OUTL Formatting Json in Nvim :subNvim:subJson@Format:
+* OUTL [#A] Formatting Json in Nvim :subNvim:subJson@Format:
 :PROPERTIES:
 :ID: 0d40ee56-9163-4c04-a762-74ddf22f48e6
 :END:

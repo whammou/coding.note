@@ -4,13 +4,9 @@
 :END:
 #+TITLE: Json Guide
 
-#+OPTIONS: title:nil tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
+#+OPTIONS: title:t tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
 #+TODO: TODO(t) (e) DOIN(d) PROG(g) PEND(p) OUTL(o) EXPL(x) FDBK(b) WAIT(w) NEXT(n) IDEA(i) | ABRT(a) PRTL(r) RVIW(v) DONE(f)
 #+FILETAGS: :typDoc:subProject:CODING:JSON:GUIDE:
-#+HTML:<details>
-
-* PEND Json Guide :typDoc:meta:CODING:JSON:GUIDE:
-#+HTML:</details>
-** PEND Learning jq :JQ:
+* PEND [#A] Learning jq :JQ:
 - *OBJECTIVE:* Learn jq language to extract json database
 - *Reference:* [[https:ngjqlang.orggtutorial/][Learn jq tutorial @JQ-doc]]

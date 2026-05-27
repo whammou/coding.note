@@ -4,16 +4,12 @@
 :END:
 #+TITLE: Lua Guide
 
-#+OPTIONS: title:nil tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
+#+OPTIONS: title:t tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
 #+TODO: TODO(t) (e) DOIN(d) PROG(g) PEND(p) OUTL(o) EXPL(x) FDBK(b) WAIT(w) NEXT(n) IDEA(i) | ABRT(a) PRTL(r) RVIW(v) DONE(f)
 #+FILETAGS: :typDoc:subProject:CODING:LUA:GUIDE:
-#+HTML:<details>
-
-* OUTL Lua Guide :typDoc:meta:CODING:LUA:GUIDE:
-#+HTML:</details>
 - *OBJECTIVE:* Learn basic lua language
 - *Reference:* [[https://github.com/pohka/Lua-Beginners-Guide][Lua beginners guide @Github]]
-** DONE Values and Types :TYPE:
+* DONE [#A] Values and Types :TYPE:
 CLOSED: [2025-08-11 Mon 21:22]
 - Lua is a *dynamically typed language*, meaning:
   - =Varibles= do NOT have types only =values= do
@@ -22,7 +18,7 @@ CLOSED: [2025-08-11 Mon 21:22]
 - There are 8 /basic types/ in =lua=: =nil=, =boolean=, =number=, =string=, =function=, =userdata=, =thread=, and =table=
 -----
 - *Reference:* [[https://www.lua.org/manual/5.1/manual.html#2.1][Types and Values Manual @Lua-doc]]
-** TODO Lua Strings Handle :STRING:
+* TODO [#A] Lua Strings Handle :STRING:
 - *Quotes* - Strings can be defined using single quotes ='=, double quotes ="=, or double square brackets =[[]]=
 - *Escape sequences* - Handle C-like escape sequences [fn:1]
 - *Multiline-quotes* - Double square brackets can be used to enclose literal strings which traverse several line

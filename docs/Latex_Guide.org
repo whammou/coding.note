@@ -4,37 +4,33 @@
 :END:
 #+TITLE: Latex Guide
 
-#+OPTIONS: title:nil tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
+#+OPTIONS: title:t tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
 #+TODO: TODO(t) (e) DOIN(d) PROG(g) PEND(p) OUTL(o) EXPL(x) FDBK(b) WAIT(w) NEXT(n) IDEA(i) | ABRT(a) PRTL(r) RVIW(v) DONE(f)
 #+FILETAGS: :typDoc:subProject:CODING:LATEX:GUIDE:
-#+HTML:<details>
-
-* PEND Latex Guide :typDoc:meta:CODING:LATEX:GUIDE:
-#+HTML:</details>
 - *OBJECTIVE:* Develop a framwork for latex format/
 - *Reference:* Tutorial documentation for latex
   - [[https://www.learnlatex.org/en/][Latex for beginner @Learntex]]
   - [[https://www.overleaf.com/learn][Overleaf latex tutorial for beginner @Overleaf]]
-** DONE Setup editor for latex :subNvim:
+* DONE [#A] Setup editor for latex :subNvim:
 CLOSED: [2025-07-12 Sat 07:51]
 - *OBJECTIVE:* Setup nvim to env to write latex in/
   - *Visit:* [[https://github.com/lervag/vimtex][Vimtex plugin @Github]]
-** TODO Files conversion :subPandoc:GEMINI:
+* TODO [#A] Files conversion :subPandoc:GEMINI:
 - [-] *OBJECTIVE:* Convert documents from and to latex/ [50%]
   - [ ] Convert from pdf to latex - Use =Gemini-2.5-pro=
   - [X] Convert from latex to pdf - Use =latexmk= or =pandoc=
 - *Complication:* Workflow integration
   Having to log on [[https://gemini.google.com/app][Google gemini @Google]] is not ideal - Integrate to shell or nvim
 - *Reference:* [[id:7c0ce0b0-4d7d-4468-8263-c3b28cd3af1b][File conversions @Orgmode]]
-*** TODO Convert PDF to latex :AI:
+** TODO Convert PDF to latex :AI:
 :PROPERTIES:
 :ID:       0fba82ab-0863-4292-838e-bee27fb27153
 :END:
 - *OBJECTIVE:* /Convert documents from PDF to latex using AI/
 - *Reference:* [[https://www.reddit.com/r/Bard/comments/1bgstvx/suddenly_discovered_latex_on_gemini_web/][Latex on Gemini @Reddit]]
-*** Convert PDF to markdown
+** Convert PDF to markdown
 - *OBJECTIVE:* Convert pdf to markdown/
-*** Pandoc conversion :subPandoc:
+** Pandoc conversion :subPandoc:
 :PROPERTIES:
 :ID: 1abf84ee-8c47-4c60-bdca-99627c2a7908
 :END:

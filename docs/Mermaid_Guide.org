@@ -3,14 +3,10 @@
 :END:
 #+TITLE: Mermaid Guide
 
-#+OPTIONS: title:nil tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
+#+OPTIONS: title:t tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
 #+TODO: TODO(t) (e) DOIN(d) PROG(g) PEND(p) OUTL(o) EXPL(x) FDBK(b) WAIT(w) NEXT(n) IDEA(i) | ABRT(a) PRTL(r) RVIW(v) DONE(f)
 #+FILETAGS: :typDoc:meta:CODING:subMermaid:
-#+HTML:<details>
-* Mermaid Guide :typDoc:meta:CODING:subMermaid:
-
-#+HTML:</details>
-** PROG Mermaid Diagram Syntax :subMermaid@Syntax:
+* PROG [#A] Mermaid Diagram Syntax :subMermaid@Syntax:
 :PROPERTIES:
 :ID: f1771d7f-f12c-439e-90b3-a8c3f35564db
 :CUSTOM_ID: diagram-syntax
@@ -23,7 +19,7 @@ Mermaid's syntax is used to create diagrams. =syntax=, together with =deployment
 
 Diagrams examples can be found in the [[https://mermaid.live][Mermaid Live Editor]]
 
-*** DONE Syntax Structure :content:
+** DONE Syntax Structure :content:
 CLOSED: [2026-04-20 Mon 21:38]
 :PROPERTIES:
 :ID: 50a2d97a-1c3f-4132-985b-7888563ce7d6
@@ -450,7 +446,7 @@ mindmap
       Mermaid
 #+end_src
 
-**** Flowcharts Diagrams :subMermaid@Diagram@Flowchart:
+*** Flowcharts Diagrams :subMermaid@Diagram@Flowchart:
 :PROPERTIES:
 :ID: 3450a0b4-944d-4ea3-929c-09464cdbd232
 :CUSTOM_ID: flowcharts-diagrams
@@ -485,7 +481,7 @@ flowchart TB
   B -->|Yes| C[Continue]
   B -->|No| D[Stop]
 #+end_src
-***** Default Node
+**** Default Node
 :PROPERTIES:
 :ID: e204e1bd-88ad-48e9-8782-9ee9fbd39e0a
 :END:
@@ -504,7 +500,7 @@ flowchart LR
 [!TIP]
 Instead of using =flowchart= one can also use =graph=
 #+end_quote
-***** A Node With Text
+**** A Node With Text
 :PROPERTIES:
 :ID: 69eef6c7-4b2a-4d4a-b536-4c6d928e5f0e
 :END:
@@ -530,7 +526,7 @@ flowchart LR
   id1[This is the rendered text in the box]
 #+end_src
 
-*** Diagram Breaking
+** Diagram Breaking
 :PROPERTIES:
 :ID: 121b937d-d5fe-4aef-bd83-69b09b3bd1a6
 :END:
@@ -549,7 +545,7 @@ One should beware that the use of some words or symbols that can break diagrams.
 | 'end'              | The word "End" can cause flowcharts and Sequence diagrams to break | wrap them in quotation marks to prevent breakage |
 | Nodes inside Nodes | Mermaid gets confused with nested shapes                           | wrap them quotation marks to prevent breaking    |
 
-*** OUTL Frontmatter of Diagram Code
+** OUTL Frontmatter of Diagram Code
 :PROPERTIES:
 :ID: 0fc2dccc-78a0-417f-a514-b05596cd255a
 :CUSTOM_ID: frontmatter-of-diagram-code
