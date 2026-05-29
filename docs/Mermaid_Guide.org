@@ -56,7 +56,7 @@ flowchart TB
         GIN["goimapnotify<br/>(3 systemd --user services)"]:::service
         CFG_GI["~/.config/imapnotify/<br/>{account}.yaml"]:::config
         GIN -->|watches via IMAP IDLE| IMAP
-        IMAP -->|IDLE notification (new/deleted/updated)| GIN
+        IMAP -->|"IDLE notification (new/deleted/updated)"| GIN
     end
     subgraph Sync["  Sync Layer"]
         direction TB
@@ -90,7 +90,9 @@ flowchart TB
         ACC2["account2 (mckaysbackup)"]:::config
         ACC3["account3 (dev.whammou)"]:::config
         subgraph Switch["Switch"]
-            F2, F3, F4
+            F2
+            F3
+            F4
         end
     end
     subgraph Desktop["  Desktop Notification"]
