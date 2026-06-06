@@ -6,7 +6,7 @@
 
 #+OPTIONS: title:t tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
 #+TODO: TODO(t) (e) DOIN(d) PROG(g) PEND(p) OUTL(o) EXPL(x) FDBK(b) WAIT(w) NEXT(n) IDEA(i) | ABRT(a) PRTL(r) RVIW(v) DONE(f)
-#+FILETAGS: :typDoc:subProject:CODING:LATEX:GUIDE:
+#+FILETAGS: :CODING:typDoc:subProject:LATEX:GUIDE:
 - *OBJECTIVE:* Develop a framwork for latex format/
 - *Reference:* Tutorial documentation for latex
   - [[https://www.learnlatex.org/en/][Latex for beginner @Learntex]]

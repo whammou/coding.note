@@ -5,7 +5,7 @@
 
 #+OPTIONS: title:t tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
 #+TODO: TODO(t) (e) DOIN(d) PROG(g) PEND(p) OUTL(o) EXPL(x) FDBK(b) WAIT(w) NEXT(n) IDEA(i) | ABRT(a) PRTL(r) RVIW(v) DONE(f)
-#+FILETAGS: :typDoc:subProject:CODING:PYTHON:GUIDE:
+#+FILETAGS: :CODING:typDoc:subProject:PYTHON:GUIDE:
 - *OBJECTIVE:* /Automantion documentation with python/
 * [#A] Python scripting :SCRIPTING:
 - *OBJECTIVE:* /Learn to do some scrpiting with python/

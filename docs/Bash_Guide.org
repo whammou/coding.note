@@ -5,7 +5,7 @@
 
 #+OPTIONS: title:t tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
 #+TODO: TODO(t) (e) DOIN(d) PROG(g) PEND(p) OUTL(o) EXPL(x) FDBK(b) WAIT(w) NEXT(n) IDEA(i) | ABRT(a) PRTL(r) RVIW(v) DONE(f)
-#+FILETAGS: :typDoc:subProject:CODING:BASH:
+#+FILETAGS: :CODING:typDoc:subProject:BASH:
 
 #+BEGIN_QUOTE
 Bash is a scripting language uses to interact with an operating system and do terminal bash tasks, but can do basic programming like other simple programming language. Its like C but for temrinal
