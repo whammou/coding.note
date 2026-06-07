@@ -1,7 +1,6 @@
-#+TITLE: Coding Logs
-#+DESCRIPTION: Description for archive here
-#+OPTIONS: ^:nil
-#+FILETAGS: TEST
+#+TITLE: Coding Log
+#+DESCRIPTION: Logs of finished items
+#+FILETAGS: :CODING:LOG:
 
 * Logs :LOG:CODING:
 - /Store finished tasks/
