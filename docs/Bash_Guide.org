@@ -2,7 +2,6 @@
 :ID: 55754a14-0425-4704-874b-6723af32b137
 :END:
 #+TITLE: Bash Guide
-
 #+OPTIONS: title:t tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
 #+TODO: TODO(t) (e) DOIN(d) PROG(g) PEND(p) OUTL(o) EXPL(x) FDBK(b) WAIT(w) NEXT(n) IDEA(i) | ABRT(a) PRTL(r) RVIW(v) DONE(f)
 #+FILETAGS: :topCoding:typDoc:subProject:BASH:

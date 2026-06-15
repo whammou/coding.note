@@ -3,7 +3,6 @@
 :ROAM_ORIGIN: 90bc68ce-6bb5-4a0c-8d21-5aae9b71ce8d
 :END:
 #+TITLE: Lua Guide
-
 #+OPTIONS: title:t tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
 #+TODO: TODO(t) (e) DOIN(d) PROG(g) PEND(p) OUTL(o) EXPL(x) FDBK(b) WAIT(w) NEXT(n) IDEA(i) | ABRT(a) PRTL(r) RVIW(v) DONE(f)
 #+FILETAGS: :topCoding:typDoc:subProject:LUA:GUIDE:
