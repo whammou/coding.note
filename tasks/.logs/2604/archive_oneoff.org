@@ -12,3 +12,10 @@ CLOSED: [2025-08-25 Mon 23:35] DEADLINE: <2025-08-25 Mon>
 :END:
 + *OBJECTIVE:* Learn to use =glob=/=globpath= to expand =wildcard= in nvim-lua
 + *Reference:* [[https://s0ands0.github.io/100-days-of-code/r001/084-vim-glob/][Vim Glob @Blog]]
+
+* DONE Create Latex snippets :LATEX:
+DEADLINE: <2025-07-07 Mon> CLOSED: [2025-07-08 Tue 02:31]
+- *OBJECTIVE:* Create shorthands for latex
+- *[NOTE]* taken on [2025-07-07 23:41]:
+  Extend latex snippets in =friendly-snippets= via =blink-cmp= in =orgmode=
+- *Reference:* [[https://github.com/rafamadriz/friendly-snippets/wiki#extending-snippets][Extending snippets @Github-wiki]]
